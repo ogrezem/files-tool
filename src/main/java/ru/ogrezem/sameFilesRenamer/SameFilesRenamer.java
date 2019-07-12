@@ -9,6 +9,7 @@ public class SameFilesRenamer {
 
     private static final String BASE_DIRECTORY_PATH = "./files/";
 
+    // TODO: придумать методу нормальное название
     public void sortSameFiles(String firstDirName, String secondDirName, String thirdDirName)
             throws IOException {
         var firstDir = new File(BASE_DIRECTORY_PATH + firstDirName);
@@ -21,15 +22,18 @@ public class SameFilesRenamer {
         File[] firstDirFiles = firstDir.listFiles();
         File[] secondDirFiles = secondDir.listFiles();
         File[] thirdDirFiles = thirdDir.listFiles();
-        var filesWithSameNames = new HashMap<String, List<File>>();
+        var namesAndFilesWithTheseNames = new HashMap<String, List<File>>();
         for (File firstDirFile : firstDirFiles) {
             for (File secondDirFile : secondDirFiles) {
                 String firstDirFileName = firstDirFile.getName();
                 if (firstDirFileName.equals(secondDirFile.getName())) {
-                    filesWithSameNames.putIfAbsent(firstDirFileName, new ArrayList<>());
-                    filesWithSameNames.get(firstDirFileName).addAll(List.of(firstDirFile, secondDirFile));
-//                    filesWithSameNames.put(firstDirFileName, firstDirFile);
-//                    filesWithSameNames.put(firstDirFileName, secondDirFile);
+                    namesAndFilesWithTheseNames.putIfAbsent(firstDirFileName, new ArrayList<>());
+                    List<File> filesWithSameName = namesAndFilesWithTheseNames.get(firstDirFileName);
+                    if (filesWithSameName.isEmpty())
+                        filesWithSameName.addAll(List.of(firstDirFile, secondDirFile));
+                    else
+                        filesWithSameName.add(secondDirFile);
+                    // TODO: отшлёпать Дианку за плохое поведение
                 }
 
             }
