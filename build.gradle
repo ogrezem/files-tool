@@ -7,11 +7,17 @@ group 'ru.ogrezem'
 version '1.0'
 
 sourceCompatibility = 10
-mainClassName =
+
+mainClassName = "ru.ogrezem.sameFilesRenamer.Application"
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile(
+            'com.google.guava:guava:28.0-jre'
+    )
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
