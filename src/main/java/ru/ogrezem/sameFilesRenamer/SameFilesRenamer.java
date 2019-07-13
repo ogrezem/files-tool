@@ -14,7 +14,7 @@ public class SameFilesRenamer {
     private static final String BASE_DIRECTORY_PATH = "./files/";
 
     // TODO: придумать методу нормальное название
-    public void sortSameFiles(String firstDirName, String secondDirName, String thirdDirName)
+    public void mergeDirsFilesWithoutNamesDuplication(String firstDirName, String secondDirName, String thirdDirName)
             throws IOException {
         var firstDir = new File(BASE_DIRECTORY_PATH + firstDirName);
         var secondDir = new File(BASE_DIRECTORY_PATH + secondDirName);
