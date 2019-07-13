@@ -13,7 +13,6 @@ public class SameFilesRenamer {
 
     private static final String BASE_DIRECTORY_PATH = "./files/";
 
-    // TODO: придумать методу нормальное название
     public void mergeDirsFilesWithoutNamesDuplication(String firstDirName, String secondDirName, String thirdDirName)
             throws IOException {
         var firstDir = new File(BASE_DIRECTORY_PATH + firstDirName);
@@ -133,15 +132,17 @@ public class SameFilesRenamer {
     }
 
     private static String getFileHash(File file) {
-        return Hashing.sha256().hashBytes(getFileBytes(file)).toString();
-    }
-
-    private static byte[] getFileBytes(File file) {
-        try (var fileInputStream = new BufferedInputStream(new FileInputStream(file))) {
-            return fileInputStream.readAllBytes();
+        try {
+            return Hashing.sha256().hashBytes(getFileBytes(file)).toString();
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
         return null;
+    }
+
+    private static byte[] getFileBytes(File file) throws IOException {
+        try (var fileInputStream = new BufferedInputStream(new FileInputStream(file))) {
+            return fileInputStream.readAllBytes();
+        }
     }
 }
