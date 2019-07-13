@@ -24,14 +24,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34e355a6-621d-44f3-86a7-ba504ae175dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesCollector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/ogrezem/sameFilesRenamer/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/ogrezem/sameFilesRenamer/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/pack1/first.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -84,7 +91,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,11 +118,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+            <state relative-caret-position="552">
+              <caret line="106" column="17" lean-forward="true" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4508#4509#0" expanded="true" />
+                <element signature="e#6945#6946#0" expanded="true" />
+                <element signature="e#7025#7026#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,20 +132,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="234">
               <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#512#513#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
                 <element signature="e#614#615#0" expanded="true" />
                 <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#793#794#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="324">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -155,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="216">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -178,10 +178,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesCollector.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.java" />
       </list>
     </option>
@@ -189,7 +189,7 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="syMucaVe" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1412" />
@@ -201,6 +201,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Course" />
       <pane id="ProjectPane">
@@ -214,12 +215,6 @@
               <item name="sameFilesRenamer" type="b2602c69:ProjectViewProjectNode" />
               <item name="sameFilesRenamer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sameFilesRenamer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sameFilesRenamer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="pack1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sameFilesRenamer" type="b2602c69:ProjectViewProjectNode" />
@@ -259,11 +254,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="sameFilesRenamer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sameFilesRenamer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sameFilesRenamer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sameFilesRenamer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sameFilesRenamer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,7 +308,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.sameFilesRenamer [run]">
+    <configuration name="SameFilesRenamerTest.sortSameFiles" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.ogrezem.sameFilesRenamer.SameFilesRenamerTest.sortSameFiles&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="sameFilesRenamer [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -321,6 +350,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SameFilesRenamerTest.sortSameFiles" />
         <item itemvalue="Gradle.sameFilesRenamer [run]" />
       </list>
     </recent_temporary>
@@ -335,33 +365,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562885778778</updated>
-      <workItem from="1562885791841" duration="22214000" />
+      <workItem from="1562885791841" duration="36744000" />
+      <workItem from="1563040158501" duration="2049000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 14h 44m 40s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 14h 45m 11s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 15h 17m 31s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 15h 17m 48s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 15h 28m 17s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 15h 33m 46s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SameFilesRenamerTest_sortSameFiles - 2019.07.13 at 15h 33m 47s.xml">
+      <configuration name="SameFilesRenamerTest.sortSameFiles" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22214000" />
+    <option name="totallyTimeSpent" value="38793000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1412" height="1026" extended-state="1" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18879056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" weight="0.32997763" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32997763" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TeamCity" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
@@ -369,20 +415,28 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Cargo" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Key Promoter X" />
-      <window_info anchor="right" id="Json Parser" />
-      <window_info anchor="right" id="JSON Viewer" />
-      <window_info anchor="right" id="Gradle" weight="0.32988167" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32997763" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32997763" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="TeamCity" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Key Promoter X" order="7" />
+      <window_info anchor="right" id="Json Parser" order="8" />
+      <window_info anchor="right" id="JSON Viewer" order="9" />
+      <window_info anchor="right" id="Gradle" order="10" weight="0.32964602" />
+      <window_info anchor="right" id="Database" order="11" />
+      <window_info anchor="right" id="Palette&#9;" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="13" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,8 +446,13 @@
     <entry file="file://$PROJECT_DIR$/files/pack2/first.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/pack1/first.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/files/pack1/first.jpg" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
@@ -405,54 +464,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="324">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ogrezem/sameFilesRenamer/SameFilesRenamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+        <state relative-caret-position="552">
+          <caret line="106" column="17" lean-forward="true" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#6945#6946#0" expanded="true" />
+            <element signature="e#7025#7026#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -6,10 +6,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SameFilesRenamer {
@@ -22,54 +19,104 @@ public class SameFilesRenamer {
         var firstDir = new File(BASE_DIRECTORY_PATH + firstDirName);
         var secondDir = new File(BASE_DIRECTORY_PATH + secondDirName);
         var targetDir = new File(BASE_DIRECTORY_PATH + thirdDirName);
+        checkDirsExistAndAreDir(firstDir, secondDir, targetDir);
+        File[] firstDirFilesList = firstDir.listFiles();
+        File[] secondDirFilesList = secondDir.listFiles();
+        checkFirstAndSecondDirsNotEmpty(firstDirFilesList, secondDirFilesList);
+        ArrayList<File> firstDirFiles = new ArrayList<>(Arrays.asList(firstDirFilesList));
+        ArrayList<File> secondDirFiles = new ArrayList<>(Arrays.asList(secondDirFilesList));
+        HashMap<String, ArrayList<File>> filesGroupedUnderNames =
+                groupFilesByNames(firstDirFiles, secondDirFiles);
+        HashMap<String, File> namesToFilesForMoving =
+                getNamesAndFilesWithoutDuplicatesForMoving(firstDirFiles, secondDirFiles, filesGroupedUnderNames);
+        moveFilesWithNewNames(targetDir, namesToFilesForMoving);
+    }
+
+    private static void checkFirstAndSecondDirsNotEmpty(File[] firstDirFilesList, File[] secondDirFilesList) {
+        if (firstDirFilesList == null || secondDirFilesList == null)
+            throw new RuntimeException("Хотя бы одна из выбранных папок пуста");
+    }
+
+    private static void checkDirsExistAndAreDir(File firstDir, File secondDir, File targetDir)
+            throws FileNotFoundException {
         boolean anyDirNotExist = !firstDir.exists() || !secondDir.exists() || !targetDir.exists();
         boolean anyDirIsntDir = !firstDir.isDirectory() || !secondDir.isDirectory() || !targetDir.isDirectory();
         if (anyDirNotExist || anyDirIsntDir)
             throw new FileNotFoundException("Хотя бы одна из заданных папок не существует");
-        File[] firstDirFilesList = firstDir.listFiles();
-        File[] secondDirFilesList = secondDir.listFiles();
-        if (firstDirFilesList == null || secondDirFilesList == null)
-            throw new RuntimeException("Хотя бы одна из выбранных папок пуста");
-        List<File> firstDirFiles = Arrays.asList(firstDirFilesList);
-        List<File> secondDirFiles = Arrays.asList(secondDirFilesList);
-        var namesAndFilesWithTheseNames = new HashMap<String, List<File>>();
-        firstDirFilesLoop:
-        for (File firstDirFile : firstDirFiles) {
-            for (File secondDirFile : secondDirFiles) {
-                String firstDirFileName = firstDirFile.getName();
-                if (firstDirFileName.equals(secondDirFile.getName())) {
-                    namesAndFilesWithTheseNames.putIfAbsent(firstDirFileName, new ArrayList<>(2));
-                    List<File> filesWithSameName = namesAndFilesWithTheseNames.get(firstDirFileName);
-                    filesWithSameName.addAll(List.of(firstDirFile, secondDirFile));
-                    firstDirFiles.remove(firstDirFile);
-                    secondDirFiles.remove(secondDirFile);
-                    continue firstDirFilesLoop;
-                }
-            }
-        }
-//        var filesForThirdDir = new ArrayList<File>();
-        var namesToFilesForMoving = new HashMap<String, File>();
-        for (File firstDirFile : firstDirFiles)
-            namesToFilesForMoving.put(firstDirFile.getName(), firstDirFile);
-        for (File secondDirFile : secondDirFiles)
-            namesToFilesForMoving.put(secondDirFile.getName(), secondDirFile);
-        for (HashMap.Entry<String, List<File>> nameAndFilesWithThisName : namesAndFilesWithTheseNames.entrySet()) {
-            List<File> files = nameAndFilesWithThisName.getValue();
-            List<File> uniqueFiles = distinctFiles(files);
-            for (int i = 0; i < uniqueFiles.size(); i++) {
-                File uniqueFile = uniqueFiles.get(i);
-                if (i == 0) {
-                    namesToFilesForMoving.put(uniqueFile.getName(), uniqueFile);
-                    continue;
-                }
-                namesToFilesForMoving.put(uniqueFile.getName() + "(" + i + ")", uniqueFile);
-            }
-        }
+    }
+
+    private static void moveFilesWithNewNames(File targetDir, HashMap<String, File> namesToFilesForMoving)
+            throws IOException {
         for (HashMap.Entry<String, File> namesToFilesForMovingEntry : namesToFilesForMoving.entrySet()) {
             File fileWillBeMoved = namesToFilesForMovingEntry.getValue();
             String fileWillBeMovedNewName = namesToFilesForMovingEntry.getKey();
             moveFileToDirectory(fileWillBeMoved, targetDir, fileWillBeMovedNewName);
         }
+    }
+
+    private static HashMap<String, File> getNamesAndFilesWithoutDuplicatesForMoving(
+            ArrayList<File> firstDirFiles, ArrayList<File> secondDirFiles,
+            HashMap<String, ArrayList<File>> namesAndFilesWithTheseNames
+    ) {
+        var namesToFilesForMoving = new HashMap<String, File>();
+        for (File firstDirFile : firstDirFiles)
+            namesToFilesForMoving.put(firstDirFile.getName(), firstDirFile);
+        for (File secondDirFile : secondDirFiles)
+            namesToFilesForMoving.put(secondDirFile.getName(), secondDirFile);
+        for (HashMap.Entry<String, ArrayList<File>> nameAndFilesWithThisName : namesAndFilesWithTheseNames.entrySet()) {
+            List<File> files = nameAndFilesWithThisName.getValue();
+            List<File> uniqueFiles = distinctFiles(files);
+            giveIndexesToSameNamesFiles(namesToFilesForMoving, uniqueFiles);
+        }
+        return namesToFilesForMoving;
+    }
+
+    private static void giveIndexesToSameNamesFiles(HashMap<String, File> namesToFilesForMoving, List<File> uniqueFiles) {
+        for (int i = 0; i < uniqueFiles.size(); i++) {
+            File uniqueFile = uniqueFiles.get(i);
+            if (i == 0) {
+                namesToFilesForMoving.put(uniqueFile.getName(), uniqueFile);
+                continue;
+            }
+            String fileNameWithIndex = getFileNameWithIndex(uniqueFile.getName(), i);
+            namesToFilesForMoving.put(fileNameWithIndex, uniqueFile);
+        }
+    }
+
+    private static HashMap<String, ArrayList<File>> groupFilesByNames(
+            ArrayList<File> firstDirFiles, ArrayList<File> secondDirFiles
+    ) {
+        var filesGroupedByName = new HashMap<String, ArrayList<File>>();
+        ListIterator<File> firstDirFilesIterator = firstDirFiles.listIterator();
+        ListIterator<File> secondDirFilesIterator = secondDirFiles.listIterator();
+        firstDirFilesLoop:
+        while (firstDirFilesIterator.hasNext()) {
+            while (secondDirFilesIterator.hasNext()) {
+                File firstDirFile = firstDirFilesIterator.next();
+                File secondDirFile = secondDirFilesIterator.next();
+                String firstDirFileName = firstDirFile.getName();
+                if (firstDirFileName.equals(secondDirFile.getName())) {
+                    filesGroupedByName.putIfAbsent(firstDirFileName, new ArrayList<>(2));
+                    ArrayList<File> filesWithSameName = filesGroupedByName.get(firstDirFileName);
+                    filesWithSameName.addAll(List.of(firstDirFile, secondDirFile));
+                    // it's important to notice: any directory can't contain two or more files with the same names
+                    // remove files from the lists to retain only files without duplicates in appropriate lists
+                    firstDirFilesIterator.remove();
+                    secondDirFilesIterator.remove();
+                    continue firstDirFilesLoop;
+                }
+            }
+        }
+        return filesGroupedByName;
+    }
+
+    private static String getFileNameWithIndex(String fileName, int index) {
+        var fileNamePartsSplittedWithDot = new ArrayList<String>(Arrays.asList(fileName.split("\\.")));
+        List<String> fileNamePartsSplittedWithDotWithoutExtension =
+                fileNamePartsSplittedWithDot.subList(0, fileNamePartsSplittedWithDot.size() - 1);
+        String fileNameWithoutExtension = String.join(".", fileNamePartsSplittedWithDotWithoutExtension);
+        String fileExtension = fileNamePartsSplittedWithDot.get(fileNamePartsSplittedWithDot.size() - 1);
+        return fileNameWithoutExtension + "(" + index + ")" + "." + fileExtension;
     }
 
     private static void moveFileToDirectory(File file, File directory, String fileNewName) throws IOException {
