@@ -1,0 +1,1 @@
+java -jar sameFilesRenamer pack1 pack2 pack3
