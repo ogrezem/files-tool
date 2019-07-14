@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'idea'
 }
 
 group 'ru.ogrezem'
@@ -9,7 +10,16 @@ version '1.0'
 sourceCompatibility = 10
 
 mainClassName = "ru.ogrezem.sameFilesRenamer.Application"
-
+jar {
+    manifest {
+        attributes (
+                'Implementation-Title': 'sameFilesRenamer',
+                'Implementation-Version': version,
+                'Main-Class': mainClassName
+        )
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
 repositories {
     mavenCentral()
 }
@@ -18,6 +28,5 @@ dependencies {
     compile(
             'com.google.guava:guava:28.0-jre'
     )
-
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
