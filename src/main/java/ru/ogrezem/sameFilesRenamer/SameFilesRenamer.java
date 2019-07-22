@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SameFilesRenamer {
-
+// loli was here
     private static final String BASE_DIRECTORY_PATH = "./files/";
 
     public void mergeDirsFilesWithoutNamesDuplication(String firstDirName, String secondDirName, String thirdDirName)
